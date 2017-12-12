@@ -1,0 +1,151 @@
+<form>
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="dashboard-title">Edit Kelas</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="container-fluid edit-wrap">
+    <h4>Data Kelas</h4>
+    <div class="row">
+
+      <div class="col-md-6">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nama Kelas</label>
+          <input ng-model="name1" ng-value="jhghjg">
+        </md-input-container>
+
+        <!-- <div class="form-group">
+          <input type="text" id="add-kelas" class="set-form set-border" ng-model="addKelas" required>
+          <label class="form-control-placeholder" for="add-kelas">Nama Kelas</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Biaya</label>
+          <input ng-model="price" value="{{list.price}}">
+        </md-input-container>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <md-input-container class="md-block">
+          <label>Deskripsi</label>
+          <textarea ng-model="description1" md-maxlength="500" rows="1" md-select-on-focus="">{{list.description}}</textarea>
+        </md-input-container>
+
+        <!-- <div class="form-group">
+          <textarea id="add-deskripsi" class="set-form set-border-textarea" maxlength="500" ng-model="adddeskripsi" required></textarea>
+          <label class="form-control-placeholder" for="add-deskripsi">Deskripsi Kelas (max. 500 kata)</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <md-input-container class="md-block" flex-gt-sm="">
+
+          <label>Lokasi Pelaksanaan</label>
+          <input ng-model="location1" type="text">
+        </md-input-container>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <md-input-container>
+          <label>Nama Tutor</label>
+          <md-select ng-model="selectTeacher">
+            <md-option ng-value="{{list.teacherId}}" selected>{{list.teacherName}}</md-option>
+            <!-- <md-option ng-repeat="teacher in dataTeacher" ng-value="{{teacher}}">{{teacher.name}}</md-option> -->
+          </md-select>
+        </md-input-container>
+        <!-- <div class="form-group">
+          <input type="text" id="add-nama-tutor" class="set-form set-border" ng-model="addNamaTutor" required>
+          <label class="form-control-placeholder" for="add-nama-tutor">Nama Tutor</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <!-- <datepicker date-format="yyyy-MM-dd"> -->
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Tanggal Pelaksanaan</label>
+            <datepicker date-format="yyyy-MM-dd">
+              <input ng-model="startDate" type="text" value="{{list.startDate}}" />
+            </datepicker>
+          </md-input-container>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <md-input-container>
+            <label>Kategori</label>
+            <md-select ng-model="category">
+              <md-option ng-value="{{name}}">{{list.categoryId}}</md-option>
+              <md-option ng-value="1">Marketing</md-option>
+              <md-option ng-value="2">Ekonomi </md-option>
+              <md-option ng-value="3">Desain</md-option>
+              <md-option ng-value="4">Komputer</md-option>
+              <md-option ng-value="5">Bahasa</md-option>
+              <md-option ng-value="6">Lainnya</md-option>
+
+            </md-select>
+          </md-input-container>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Mulai</label>
+            <input ng-model="startTime" type="text" value="{{list.startTime}}">
+          </md-input-container>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <span>Hingga</span>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <div class="form-group">
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>Berakhir</label>
+              <input ng-model="endTime" type="text" value="{{list.endTime}}">
+            </md-input-container>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row submit-wrap ">
+      <div class="col-md-6 "></div>
+      <div class="col-md-2 ">
+      </div>
+      <div class="col-md-2 ">
+        <button type="reset " class="btn btn-primary btn-cancel btn-cancel-color pull-left ">Batalkan</button>
+      </div>
+      <div class="col-md-2 ">
+        <button type="submit " class="btn btn-primary btn-save btn-save-color pull-right" ng-click="clickUpdate()">Update</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  </div>
+</form>

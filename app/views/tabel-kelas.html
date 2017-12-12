@@ -1,0 +1,63 @@
+<div class="container-custom">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="dashboard-title">Kelas</h2>
+    </div>
+    <div class="col-md-8">
+      <form class="form-search pull-right" action="#">
+        <input type="search" ng-model="cariKelas" placeholder="Find in here . . ." class="input-search">
+      </form>
+      <a ui-sref="landing.tambah-kelas"><button class="btn btn-primary button-add pull-right add-button">Tambah Kelas</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE KELAS -->
+<div class="container-fluid table-wrap">
+  <table class="table table-bordred table-striped">
+    <thead>
+      <tr>
+        <th>Nama Kelas</th>
+        <th>Kategori</th>
+        <th>Nama Tutor</th>
+        <th>Status</th>
+        <th>Tanggal Dibuat</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- dataKelas dibuat untuk menampung data yang ada di kelas. kelas di ambil dari kontroler -->
+      <tr ng-repeat="dataKelas in dataClassess | orderBy:'name' | filter:cariKelas">
+        <td>{{dataKelas.name}}</td>
+        <td>{{dataKelas.category}}</td>
+        <td>{{dataKelas.teacherName}}</td>
+
+        <td ng-if="dataKelas.classStatus === 'not_active'">
+          <div></div>
+          Tidak Aktif</td>
+        <td ng-if="dataKelas.classStatus === 'active'">
+          Aktif</td>
+        <td>{{dataKelas.startAt}}</td>
+        <td>
+          <!-- <button type="submit" class="glyphicon glyphicon-edit" ng-click="getClassesId(dataKelas)" aria-hidden="true"> -->
+          <button type="submit" class="glyphicon glyphicon-remove-sign delete-color space" ng-click="showConfirm($event,dataKelas.id)" aria-hidden="true">
+
+
+      </tr>
+    </tbody>
+  </table>
+  <!-- Pagination -->
+  <!-- <div class="clearfix"></div>
+  <ul class="pagination pull-right">
+    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+  </ul> -->
+</div>
+
+<!-- EDIT MODAL KELAS  -->

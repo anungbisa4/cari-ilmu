@@ -1,0 +1,79 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <img src="images/cariilmu-logo.png" alt="" class="img-circle img-profile">
+      </li>
+      <li>
+        <a ng-click="signout()" style="cursor:pointer"><span class="logout-cariilmulogout" aria-hidden="true"></span><span id="idLogout">Sign Out</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Sidebar Menu -->
+<div class="sidebar-wrap">
+  <div class="img-logo">
+    <img src="images/Logo-putih-hv.svg">
+  </div>
+
+  <ul class="sidebar-menu">
+    <li><a ui-sref="landing.home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Beranda</a></li>
+    <li><a ui-sref="landing.tabel-kelas"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>Kelas</a>
+    </li>
+    <li><a ui-sref="landing.tabel-tutor" data-target="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>Tutor</a>
+    </li>
+    <li><a ui-sref="landing.murid"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>Murid</a></li>
+    <li><a ui-sref="landing.pembayaran"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>Pembayaran</a></li>
+  </ul>
+
+</div>
+
+
+
+
+
+<!-- content -->
+
+<div class="content-wrap">
+  <div ui-view="level1"></div>
+</div>
+
+<!-- Notifikasi -->
+<!-- <div class="notif-wrap">
+  <div class="header-notif">
+    <span class="glyphicon glyphicon-bell"></span>
+    <h4>Notifikasi</h4>
+    <div class="scrollable">
+      <div class="date-notif">22 Oktober 2017</div>
+      <ul class="ul-list-style">
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+          <h5>Beberapa menit lalu</h5></li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+          <h5>Beberapa menit lalu</h5></li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+          <h5>Beberapa menit lalu</h5></li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+          <h5>Beberapa menit lalu</h5></li>
+      </ul>
+      <div class="date-notif">21 Oktober 2017</div>
+      <ul class="ul-list-style">
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+        </li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+        </li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+        </li>
+        <li>
+          <div class="oval-cariilmuoval"></div>Anung Anindhita membuat “Kelas Gitar”
+        </li>
+      </ul>
+    </div>
+  </div> -->

@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'logout';
+  src:  url('logout.eot?jb043f');
+  src:  url('logout.eot?jb043f#iefix') format('embedded-opentype'),
+    url('logout.ttf?jb043f') format('truetype'),
+    url('logout.woff?jb043f') format('woff'),
+    url('logout.svg?jb043f#logout') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="logout-cariilmu"], [class*=" logout-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'logout' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logout-cariilmulogout:before {
+  content: "\e900";
+}
+
+@font-face {
+  font-family: 'bell-cariilmu';
+  src:  url('bell-cariilmu.eot?6d7jnc');
+  src:  url('bell-cariilmu.eot?6d7jnc#iefix') format('embedded-opentype'),
+    url('bell-cariilmu.ttf?6d7jnc') format('truetype'),
+    url('bell-cariilmu.woff?6d7jnc') format('woff'),
+    url('bell-cariilmu.svg?6d7jnc#bell-cariilmu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="bell-cariilmu"], [class*=" bell-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bell-cariilmu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bell-cariilmunotification-icon:before {
+  content: "\e900";
+  color: #fff;
+}
+@font-face {
+  font-family: 'oval-cariilmu';
+  src:  url('oval-cariilmu.eot?6bt536');
+  src:  url('oval-cariilmu.eot?6bt536#iefix') format('embedded-opentype'),
+    url('oval-cariilmu.ttf?6bt536') format('truetype'),
+    url('oval-cariilmu.woff?6bt536') format('woff'),
+    url('oval-cariilmu.svg?6bt536#oval-cariilmu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="oval-cariilmu"], [class*=" oval-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'oval-cariilmu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.oval-cariilmuoval:before {
+  content: "\e900";
+  color: #4da1ff;
+}
+
+@font-face {
+  font-family: 'sidebar-cariilmu';
+  src:  url('sidebar-cariilmu.eot?gquwr4');
+  src:  url('sidebar-cariilmu.eot?gquwr4#iefix') format('embedded-opentype'),
+    url('sidebar-cariilmu.ttf?gquwr4') format('truetype'),
+    url('sidebar-cariilmu.woff?gquwr4') format('woff'),
+    url('sidebar-cariilmu.svg?gquwr4#sidebar-cariilmu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="sidebar-cariilmu"], [class*=" sidebar-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sidebar-cariilmu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sidebar-cariilmuic_murid:before {
+  content: "\e900";
+  color: #f2f2f2;
+}
+.sidebar-cariilmuguru-icon:before {
+  content: "\e901";
+  color: #f2f2f2;
+}
+.sidebar-cariilmuic_home:before {
+  content: "\e902";
+  color: #f2f2f2;
+}
+.sidebar-cariilmuic_kelas:before {
+  content: "\e903";
+  color: #f2f2f2;
+}
+@font-face {
+  font-family: 'tabel-cariilmu';
+  src:  url('tabel-cariilmu.eot?ikuk7h');
+  src:  url('tabel-cariilmu.eot?ikuk7h#iefix') format('embedded-opentype'),
+    url('tabel-cariilmu.ttf?ikuk7h') format('truetype'),
+    url('tabel-cariilmu.woff?ikuk7h') format('woff'),
+    url('tabel-cariilmu.svg?ikuk7h#tabel-cariilmu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="tabel-cariilmu"], [class*=" tabel-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tabel-cariilmu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tabel-cariilmuhapus:before {
+  content: "\e900";
+  color: #4f4f4f;
+}
+.tabel-cariilmuedit:before {
+  content: "\e901";
+  color: #4f4f4f;
+}
+
+@font-face {
+  font-family: 'payment-cariilmu';
+  src:  url('payment-cariilmu.eot?m0piq5');
+  src:  url('payment-cariilmu.eot?m0piq5#iefix') format('embedded-opentype'),
+    url('payment-cariilmu.ttf?m0piq5') format('truetype'),
+    url('payment-cariilmu.woff?m0piq5') format('woff'),
+    url('payment-cariilmu.svg?m0piq5#payment-cariilmu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="payment-cariilmu"], [class*=" payment-cariilmu"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'payment-cariilmu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.payment-cariilmupayment:before {
+  content: "\e900";
+  color: #e0e0e0;
+}

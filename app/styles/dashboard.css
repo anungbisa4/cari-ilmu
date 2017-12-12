@@ -1,0 +1,335 @@
+/* Css for Body */
+body{
+	background-color: #F4F8F9;
+	font-family: 'helvetica', sans-serif;
+}
+
+/* Setting image profile admin*/
+.img-profile{
+	margin-top: 20px;
+	height: 30px;
+}
+
+/*Setting for navbar menu*/
+.navbar-custom{
+	height: 70px;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #E7E9EA;
+	margin-left: 200px;
+	padding-right: 40px;
+	vertical-align: middle;
+}
+
+.navbar-custom a{
+	margin: 8px;
+	color: black;
+}
+.navbar-custom a:hover{
+	color: rgb(83, 83, 83);
+	background-color: white !important;
+}
+
+/* Setting for Log out position*/
+#idLogout{
+	display: block;
+	margin-left: 60px;
+	margin-top: -26px;
+}
+
+.logout-cariilmulogout{
+	font-size: 25px;
+	padding: 0 20px;
+}
+
+/*Setting form sidebar wrap*/
+
+.sidebar-wrap{
+	width: 200px;
+	height: 100vh;
+	background-color: #4F4F4F;
+	position: fixed;
+}
+
+/* Setting for logo image*/
+.img-logo{
+	height: 70px;
+	padding-top: 7px;
+}
+
+.img-logo img{
+	width: 150px;
+	position: relative;
+	margin: auto;
+	display: block;
+	top: 10px;
+}
+
+/*Setting for sidebar menu*/
+.sidebar-menu{
+	list-style: none;
+	padding: 0;
+}
+
+/* Setting link in sidebar menu*/
+.sidebar-menu a{
+	margin: auto;
+	display: block;
+	padding: 20px 20px;
+	color: white;
+	border-left: 3px solid #4F4F4F;
+}
+
+/* Setting span in sidebar-menu*/
+.sidebar-menu span{
+	padding-right: 30px;
+	padding-left: 20px;
+}
+
+/* Setting hover,focus and active in link sidebar-menu*/
+.sidebar-menu a:hover ,.sidebar-menu a:focus,.sidebar-menu a:active{
+	text-decoration: none;
+	background-color: #646464;
+	border-left: 3px solid #63ADFF;
+}
+/*Setting for ul menu alias dropdown in another ul li */
+.sidebar-menu ul{
+	list-style: none;
+	padding: 0;
+	background-color: #646464;
+	display: none;
+}
+
+.sidebar-menu ul a,
+.sidebar-menu ul a:hover {
+	border-left: none;
+}
+
+/*Setting notification wrap*/
+.notif-wrap{
+	overflow: hidden;
+	width: 250px;
+	height: 100vh;
+	background-color: white;
+	border-left: 1px solid #efefef;
+	position: fixed;
+	right: 0;
+
+}
+/* Setting scrollable menu in notification */
+.scrollable{
+	overflow-y: scroll;
+
+    position: absolute;
+    top:200px;
+    left:20px;
+    right:20px;
+    bottom:10px;
+}
+/* icon bell for notification*/
+.bell-cariilmunotification-icon{
+	font-size: 30px;
+}
+/* header notification position */
+.header-notif{
+	margin:130px 15px 15px 15px;
+}
+
+.header-notif span{
+	padding: 10px 15px;
+	background-color: #4DA1FF;
+	color: white;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+/* Setting for h4 style in header-notif*/
+.header-notif h4{
+	position: absolute;
+	top: 125px;
+	right: 80px;
+}
+/* Setting for h5 style in header-notif */
+.header-notif h5{
+	color: #DCE0E5;
+	font-size: 10px;
+	margin-top: 2px;
+}
+
+.ul-list-style{
+	list-style: none;
+}
+/* Setting li icon */
+.oval-cariilmuoval{
+	display: inline;
+	margin-left: -30px;
+	margin-right: 20px;
+	padding: 0;
+	font-size: 10px;
+}
+/* Setting date in notification */
+.date-notif{
+	width: 265px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DCE0E5;
+	color: #DCE0E5;
+}
+
+/* Style for content*/
+.content-wrap{
+	margin: 70px 0 0 200px;
+	float: left;
+	width: calc(100% - 200px);
+}
+.container-custom{
+	margin: 10px 20px  !important;
+}
+
+.dashboard-title{
+	margin-top: 30px;
+}
+
+
+.form-search .input-search {
+  border: 1px solid #E0E0E0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 20px;
+  background: url(../images/search-icon.svg) no-repeat 7px rgba(255, 255, 255, 0.5);
+  padding: 10px 10px 10px 40px;
+  font-size: 12px;
+	margin-top: 30px;
+	outline: none;
+}
+
+.box-wrap{
+	background: #fff;
+	height: 90px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+.content-title{
+	margin: 30px 0 20px 0;
+}
+
+.box-content-wrap{
+	background: #fff;
+	margin-top: 20px;
+	height: 300px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+	/*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+.box-content-wrap img{
+	margin-top: 30px;
+	width: 100px;
+}
+
+.kelas-img{
+	width: 160px !important;
+}
+
+.box-content-wrap h3, h5{
+	text-align: center;
+}
+.box-content-wrap h5{
+	padding: 0 20px;
+}
+.button-add{
+	margin-top: 20px;
+	background-color: #2D9CDB;
+	border: none;
+	border-radius: 30px;
+	width: 150px;
+	padding: 10px;
+}
+
+button{
+	outline: none !important;
+}
+
+
+
+/* -- Setting font icon --*/
+.icon-show{
+	content: "\e902";
+	font-size: 30px;
+	padding-left: 20px;
+}
+
+.color-1{
+	background-color: red;
+}
+.blue-color {
+	color: #4DA1FF !important;
+}
+.red-color{
+	color: #E65858 !important;
+}
+.green-color{
+	color: #219653 !important;
+}
+.blue-color:before {
+	color: #4DA1FF !important;
+}
+.red-color:before {
+	color: #E65858 !important;
+}
+.green-color:before {
+	color: #219653 !important;
+}
+.count-data{
+	font-size: 14px;
+	margin-bottom: 2px;
+	margin-top: -10px;
+}
+
+.position-middle{
+	margin-top: 30px;
+}
+
+.margin-count{
+	font-size: 20px;
+}
+
+
+/* Modal styles */
+	.modal .modal-dialog {
+		max-width: 400px;
+	}
+	.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+		padding: 20px 30px;
+	}
+	.modal .modal-content {
+		border-radius: 3px;
+	}
+	.modal .modal-footer {
+		background: #ecf0f1;
+		border-radius: 0 0 3px 3px;
+	}
+    .modal .modal-title {
+        display: inline-block;
+    }
+	.modal .form-control {
+		border-radius: 2px;
+		box-shadow: none;
+		border-color: #dddddd;
+	}
+	.modal textarea.form-control {
+		resize: vertical;
+	}
+	.modal .btn {
+		border-radius: 2px;
+		min-width: 100px;
+	}
+	.modal form label {
+		font-weight: normal;
+	}

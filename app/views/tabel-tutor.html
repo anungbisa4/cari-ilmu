@@ -1,0 +1,54 @@
+<div class="container-custom">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="dashboard-title">Tutor</h2>
+    </div>
+    <div class="col-md-8">
+      <div class="form-search pull-right">
+        <input type="search" ng-model="cariTutor" placeholder="Find in here . . ." class="input-search">
+      </div>
+      <a ui-sref="landing.tambah-tutor"><button class="btn btn-primary button-add pull-right add-button">Tambah Tutor</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE KELAS -->
+<div class="container-fluid table-wrap">
+  <table class="table table-bordred table-striped">
+    <thead>
+      <tr>
+        <th>Nama Tutor</th>
+        <th>Email</th>
+        <th>No. Handphone</th>
+        <th>Jumlah Kelas</th>
+        <th>Tanggal Dibuat</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="teacher in dataTeacher | filter:cariTutor">
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.email}}</td>
+        <td>{{teacher.phoneNumber}}</td>
+        <td>{{teacher.classCount}}</td>
+        <td>{{teacher.joinedDate}}</td>
+        <td>
+          <!-- <button type="submit" class="glyphicon glyphicon-edit space" ng-click="" aria-hidden="true"> -->
+          <button type="submit" class="glyphicon glyphicon-remove-sign delete-color" ng-click="showConfirm($event,teacher.id)" aria-hidden="true">
+
+      </tr>
+
+
+    </tbody>
+  </table>
+  <!-- <div class="clearfix"></div>
+  <ul class="pagination pull-right">
+    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+  </ul> -->
+</div>

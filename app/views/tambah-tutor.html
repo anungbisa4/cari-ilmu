@@ -1,0 +1,101 @@
+<form name="teacherForm" ng-submit="saveTeacher()" novalidate>
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="dashboard-title">Tambah Tutor</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="container-fluid edit-wrap">
+    <h4>Data Tutor</h4>
+    <div class="row">
+
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nama Lengkap</label>
+          <input ng-model="name" type="text" name="name" required>
+          <span ng-show="teacherForm.$submitted || teacherForm.name.$touched">
+            <span class="alertError" ng-show="teacherForm.name.$error.required">Wajib Isi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Email</label>
+          <input ng-model="email" type="email" name="email" required>
+          <span ng-show="teacherForm.$submitted || teacherForm.email.$touched">
+            <span class="alertError" ng-show="teacherForm.email.$error.required">Wajib Isi</span>
+          <span class="alertError" ng-show="teacherForm.email.$error.email">Harap isi email dengan benar</span>
+          </span>
+        </md-input-container>
+
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nomor Telepon</label>
+          <input ng-model="phoneNumber" type="text" name="phoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+          <span ng-show="teacherForm.$submitted || teacherForm.phoneNumber.$touched">
+            <span class="alertError" ng-show="teacherForm.phoneNumber.$error.required">Wajib Isi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Pendidikan Terakhir</label>
+          <input ng-model="lastEducation" type="text" name="lastEducation" required>
+          <span ng-show="teacherForm.$submitted || teacherForm.lastEducation.$touched">
+            <span class="alertError" ng-show="teacherForm.lastEducation.$error.required">Wajib Isi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Institusi</label>
+          <input ng-model="institution" type="text" name="institution" required>
+          <span ng-show="teacherForm.$submitted || teacherForm.institution.$touched">
+            <span class="alertError" ng-show="teacherForm.institution.$error.required">Wajib Isi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+
+    </div>
+
+
+    <div class="row submit-wrap">
+      <div class="col-md-6"></div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+        <button ui-sref="landing.tabel-tutor" class="btn btn-primary btn-cancel btn-cancel-color pull-right">Batalkan</button>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" ng-disabled="teacherForm.$invalid" class="btn btn-primary btn-save btn-save-color pull-left">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,134 @@
+
+/*Style for add  */
+.add-button{
+  margin: 30px 15px  0 0 !important;
+}
+
+/*Style for table wrap*/
+.table-wrap{
+  background-color: white !important;
+  margin-top: 30px;
+}
+
+/* Style space*/
+.space{
+  margin-right: 10px;
+}
+/*Style color delete*/
+.delete-color{
+  color:red;
+}
+
+/*Style click delete*/
+.delete-color:active{
+  background-color: red;
+  color:white;
+}
+/* Style for link a in table*/
+.table a{
+  text-decoration: none;
+}
+/* Style td in table*/
+.table td{
+  padding: 20px 8px !important;
+}
+
+/* Style for button payment, save and cancel */
+.btn-payment,.btn-save,.btn-cancel{
+  border-radius: 20px !important;
+  border: 1px #E0E0E0 solid;
+  color: white;
+}
+/* style color for payment paid*/
+.btn-payment-paid{
+  color: white;
+  background-color: #219653;
+}
+/* Style color for payment unpaid*/
+.btn-payment-unpaid{
+  background-color: #EB5757;
+}
+.btn-payment-paid:hover,.btn-payment-paid:active{
+  color:white;
+  background: #219653;
+}
+/*Hover color*/
+.btn-payment-unpaid:hover{
+  color: white;
+  background-color: #E71F1F;
+}
+
+/* style color unpaid in focus */
+/*.btn-payment-unpaid:focus{
+  background-color: #219653 !important;
+  border: 1px #E0E0E0 solid;
+}*/
+
+/* button save color*/
+.btn-save-color{
+  background-color: #2D9CDB;
+  padding: 6px 40px 6px 40px;
+}
+
+/* button cancel color*/
+.btn-cancel-color{
+  background-color: #BDBDBD;
+}
+
+
+.edit-wrap{
+  padding: 20px !important;
+  background-color: white !important;
+  margin-top: 30px;
+  height: 100vh !important;
+}
+.edit-wrap h4{
+  padding: 0 0 30px 25px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
+.set-form:focus + .form-control-placeholder,
+.set-form:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+.set-form{
+  display: block;
+  border: none;
+  outline: none;
+  padding-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+input.set-border{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.set-border-textarea{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 40px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.submit-wrap{
+  margin-top: 40px !important;
+}

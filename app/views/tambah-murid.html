@@ -1,0 +1,81 @@
+<form name="studentForm" novalidate>
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="dashboard-title">Tambah Murid</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container-fluid edit-wrap">
+    <h4>Data Murid</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nama Lengkap</label>
+          <input ng-model="name" type="text" name="name" required>
+          <span ng-show="studentForm.$submitted || studentForm.name.$touched">
+            <span class="alertError" ng-show="studentForm.name.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Email</label>
+          <input ng-model="email" type="email" name="email" required>
+          <span ng-show="studentForm.$submitted || studentForm.email.$touched">
+            <span class="alertError" ng-show="studentForm.email.$error.required">Wajib Diisi atau gunakan email yang valid</span>
+          <span class="alertError" ng-show="studentForm.email.$error.email">Harap isi email dengan benar</span>
+          </span>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nama Pengguna</label>
+          <input ng-model="username" type="text" name="username" required>
+          <span ng-show="studentForm.$submitted || studentForm.username.$touched">
+            <span class="alertError" ng-show="studentForm.username.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nomor Telepon</label>
+          <input ng-model="phoneNumber" type="text" name="phoneNumber" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+          <span ng-show="studentForm.$submitted || studentForm.phoneNumber.$touched">
+            <span class="alertError" ng-show="studentForm.phoneNumber.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+      </div>
+      <div class="col-md-12">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Kata Sandi</label>
+          <input ng-model="password" type="password" name="password" minlength="6" required>
+          <span ng-show="studentForm.$submitted || studentForm.password.$touched">
+            <span class="alertError" ng-show="studentForm.password.$error.required">Wajib Diisi</span>
+          <span class="alertError" ng-show="studentForm.password.$error.minlength">Password 6 huruf minimal</span>
+          </span>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row submit-wrap">
+      <div class="col-md-6"></div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+        <button ui-sref="landing.murid" name="button" class="btn btn-primary btn-cancel btn-cancel-color pull-right">Batalkan</button>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" ng-disabled="studentForm.$invalid" ng-click="saveStudent()" class="btn btn-primary btn-save btn-save-color pull-right">Simpan</button>
+      </div>
+    </div>
+  </div>
+</form>

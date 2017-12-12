@@ -1,0 +1,176 @@
+<form name="addClassesForm" novalidate ng-submit="clickClasses()">
+  <div class="container-custom">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="dashboard-title">Tambah Kelas</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="container-fluid edit-wrap">
+    <h4>Data Kelas</h4>
+    <div class="row">
+
+      <div class="col-md-6">
+        <md-time-picker ng-model="time" message="message" read-only="readonly" mandatory="required" no-meridiem no-auto-switch></md-time-picker>
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Nama Kelas</label>
+          <input ng-model="name1" name="name" autofocus required>
+          <span ng-show="addClassesForm.$submitted || addClassesForm.name.$touched">
+            <span class="alertError" ng-show="addClassesForm.name.$error.required">Wajib Isi</span>
+          </span>
+        </md-input-container>
+        <!-- <div class="form-group">
+          <input type="text" id="add-kelas" class="set-form set-border" ng-model="addKelas" required>
+          <label class="form-control-placeholder" for="add-kelas">Nama Kelas</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Biaya</label>
+          <input ng-model="price" name="name" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+          <span ng-show="addClassesForm.$submitted || addClassesForm.name.$touched">
+            <span class="alertError" ng-show="addClassesForm.name.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <md-input-container class="md-block">
+          <label>Deskripsi</label>
+          <textarea ng-model="description1" md-maxlength="500" rows="1" md-select-on-focus="" name="description1" required></textarea>
+          <span ng-show="addClassesForm.$submitted || addClassesForm.description1.$touched">
+            <span class="alertError" ng-show="addClassesForm.description1.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+
+        <!-- <div class="form-group">
+          <textarea id="add-deskripsi" class="set-form set-border-textarea" maxlength="500" ng-model="adddeskripsi" required></textarea>
+          <label class="form-control-placeholder" for="add-deskripsi">Deskripsi Kelas (max. 500 kata)</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <md-input-container class="md-block" flex-gt-sm="">
+          <label>Lokasi Pelaksanaan</label>
+          <input ng-model="location1" name="location1" required>
+          <span ng-show="addClassesForm.$submitted || addClassesForm.location1.$touched">
+            <span class="alertError" ng-show="addClassesForm.location1.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <md-input-container>
+          <label>Nama Tutor</label>
+          <md-select ng-model="selectTeacher" name="selectTeacher" required>
+            <md-option ng-repeat="teacher in dataTeacher" ng-value="{{teacher}}">{{teacher.name}}</md-option>
+          </md-select>
+          <span ng-show="addClassesForm.$submitted || addClassesForm.selectTeacher.$touched">
+            <span class="alertError" ng-show="addClassesForm.selectTeacher.$error.required">Wajib Diisi</span>
+          </span>
+        </md-input-container>
+        <!-- <div class="form-group">
+          <input type="text" id="add-nama-tutor" class="set-form set-border" ng-model="addNamaTutor" required>
+          <label class="form-control-placeholder" for="add-nama-tutor">Nama Tutor</label>
+        </div> -->
+
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <!-- <datepicker date-format="yyyy-MM-dd"> -->
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Tanggal Pelaksanaan</label>
+            <datepicker date-format="yyyy-MM-dd">
+              <input ng-model="dateStart" type="date" name="dateStart" min="{{min}}" required />
+            </datepicker>
+            <span ng-show="addClassesForm.$submitted || addClassesForm.dateStart.$touched">
+              <span class="alertError" ng-show="addClassesForm.dateStart.$error.required">Wajib Diisi</span>
+            <span class="alertError" ng-show="addClassesForm.dateStart.$error.min">Wajib Diisi Dengan Tanggal Sekarang Atau Setelahnya</span>
+            </span>
+          </md-input-container>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <md-input-container>
+            <label>Kategori</label>
+            <md-select ng-model="category" name="category" required>
+              <md-option ng-value="1">Marketing</md-option>
+              <md-option ng-value="2">Ekonomi </md-option>
+              <md-option ng-value="3">Desain</md-option>
+              <md-option ng-value="4">Komputer</md-option>
+              <md-option ng-value="5">Bahasa</md-option>
+              <md-option ng-value="6">Lainnya</md-option>
+            </md-select>
+            <span ng-show="addClassesForm.$submitted || addClassesForm.category.$touched">
+              <span class="alertError" ng-show="addClassesForm.category.$error.required">Wajib Diisi</span>
+            </span>
+          </md-input-container>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <md-input-container class="md-block" flex-gt-sm="">
+            <label>Mulai</label>
+            <input ng-model="startTime" type="time" name="startTime" required>
+
+            <span ng-show="addClassesForm.$submitted || addClassesForm.startTime.$touched">
+              <span class="alertError" ng-show="addClassesForm.startTime.$error.required">Wajib Diisi</span>
+            </span>
+          </md-input-container>
+        </div>
+      </div>
+      <div class="col-md-2" style="text-align:center:;">
+        <span>Hingga</span>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <div class="form-group">
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>Berakhir</label>
+              <input ng-model="endTime" type="time" name="endTime" required>
+              <span ng-show="addClassesForm.$submitted || addClassesForm.endTime.$touched">
+                <span class="alertError" ng-show="addClassesForm.endTime.$error.required">Wajib Diisi</span>
+              </span>
+            </md-input-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row submit-wrap ">
+      <div class="col-md-6 "></div>
+      <div class="col-md-2 ">
+      </div>
+      <div class="col-md-2 ">
+        <button ui-sref="landing.tabel-kelas" class="btn btn-primary btn-cancel btn-cancel-color pull-right">Batalkan</button>
+      </div>
+      <div class="col-md-2 ">
+        <button type="submit" ng-disabled="addClassesForm.$invalid" class="btn btn-primary btn-save btn-save-color pull-right">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  </div>
+</form>

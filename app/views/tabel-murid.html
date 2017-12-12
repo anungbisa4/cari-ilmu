@@ -1,0 +1,59 @@
+<div class="container-custom">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="dashboard-title">Murid</h2>
+    </div>
+    <div class="col-md-8">
+      <form class="form-search pull-right" action="#">
+        <input type="search" ng-model="cariMurid" placeholder="Find in here . . ." class="input-search">
+      </form>
+      <a ui-sref="landing.tambah-murid"><button class="btn btn-primary button-add pull-right add-button">Tambah Murid</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE KELAS -->
+<div class="container-fluid table-wrap">
+  <table class="table table-bordred table-striped">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Jumlah Kelas</th>
+        <th>Tanggal Dibuat</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- dataKelas dibuat untuk menampung data yang ada di kelas. kelas di ambil dari kontroler -->
+      <tr ng-repeat="listStudent in dataStudent | orderBy:'name' | filter:cariMurid">
+        <td>{{listStudent.name}}</td>
+        <td>{{listStudent.email}}</td>
+        <td>{{listStudent.username}}</td>
+        <td>{{listStudent.joinedClassCount}}</td>
+        <td>{{listStudent.joinedDate}}</td>
+        <td>
+          <!-- <button type="submit" class="glyphicon glyphicon-edit" ng-click="" aria-hidden="true"> -->
+          <button type="submit" class="glyphicon glyphicon-remove-sign delete-color" ng-click="showConfirm($event,listStudent.id)" aria-hidden="true">
+
+
+      </tr>
+    </tbody>
+  </table>
+  <!-- Pagination -->
+  <!-- <div class="clearfix"></div>
+  <ul class="pagination pull-right">
+    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+  </ul> -->
+</div>
+
+
+<!-- EDIT MODAL KELAS  -->

@@ -1,0 +1,85 @@
+<div class="container-custom">
+  <div class="row">
+    <div class="col-md-4">
+      <h2 class="dashboard-title">Pembayaran</h2>
+    </div>
+    <div class="col-md-8">
+      <form class="form-search pull-right" action="#">
+        <input type="search" ng-model="cariPembayaran" placeholder="Find in here . . ." class="input-search">
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE KELAS -->
+<div class="container-fluid table-wrap">
+  <table class="table table-bordred table-striped">
+    <thead>
+      <tr>
+        <th>Nama Kelas</th>
+        <th>Id</th>
+        <th>Nama Murid</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Konfirmasi Pembayaran</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- dataKelas dibuat untuk menampung data yang ada di kelas. kelas di ambil dari kontroler -->
+      <tr ng-repeat="listPayment in dataPayment | filter:cariPembayaran | orderBy:'-date'">
+        <td>{{listPayment.className}}</td>
+        <td>{{listPayment.id}}</td>
+        <td>{{listPayment.studentName}}</td>
+        <td>{{listPayment.studentEmail}}</td>
+        <td ng-if="listPayment.status === 'paid'" style="color:green">
+          Sudah Dibayar</td>
+        <td ng-if="listPayment.status === 'unpaid'" style="color:red">
+          Belum Dibayar</td>
+        <td>
+          <div ng-if="listPayment.date === listPayment.date">
+            {{listPayment.date}}</div>
+
+          <div ng-if="!listPayment.date">
+            <button type="submit" class="btn btn-payment btn-payment-unpaid" ng-click="getConfirm(listPayment.id)">Set Sudah Bayar</button>
+          </div>
+        </td>
+        <!-- <td> -->
+        <!-- <button ng-if="listPayment.date === listPayment.date" type="submit" class="btn btn-payment btn-payment-paid">Sudah Bayar</button>
+
+          <button ng-if="!listPayment.date" type="submit" class="btn btn-payment btn-payment-unpaid" ng-click="getConfirm(listPayment.id)">Bayar</button> -->
+        <!-- <button type="submit" class="btn btn-payment {{buttonStyle}}" ng-disabled="isDisabled" ng-click="clickPaid()">{{confirm()}}{{asd}}</button> -->
+        <!-- </td> -->
+
+
+        <!--  -->
+        <div ng-init="init()">
+          <div ng-repeat="date in dates" class="dateformatter">
+
+
+
+
+            <span><strong>Date time Format</strong> : {{ date.date1 | datetime }}</span>
+
+
+          </div>
+        </div>
+        <!--  -->
+
+</div>
+</tr>
+</tbody>
+</table>
+<!-- <div class="clearfix"></div>
+<ul class="pagination pull-right">
+  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+</ul> -->
+</div>
+
+<!-- EDIT MODAL KELAS  -->

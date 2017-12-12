@@ -1,0 +1,96 @@
+<div class="container-custom">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="dashboard-title">Beranda</h2>
+    </div>
+    <div class="col-md-4">
+      <form class="form-search pull-right" action="#">
+        <input type="search" name="" placeholder="Find in here . . ." class="input-search">
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="box-wrap">
+        <!-- <div class="row">
+          <div class="col-md-6" style="background-color:red;text-align:center">sodasd</div>
+          <div class="col-md-6">das</div>
+        </div> -->
+
+        <div class="row">
+          <div class="col-md-4 position-middle">
+            <span class="glyphicon glyphicon-calendar blue-color icon-show" aria-hidden="true"></span>
+          </div>
+          <div class="col-md-8 position-middle">
+            <div class="count-data">
+              Jumlah kelas
+            </div>
+            <div class="blue-color margin-count">
+              {{dataClassess.total}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box-wrap">
+
+        <div class="row">
+          <div class="col-md-4 position-middle">
+            <span class="glyphicon glyphicon-tasks red-color icon-show" aria-hidden="true"></span>
+          </div>
+          <div class="col-md-8 position-middle">
+            <div class="count-data">
+              Jumlah Guru
+            </div>
+            <div class="red-color margin-count">
+              {{dataTeacher.total}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box-wrap">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 position-middle">
+            <span class="glyphicon glyphicon-education green-color icon-show" aria-hidden="true"></span>
+          </div>
+          <div class="col-md-8 col-sm-12 position-middle">
+            <div class="count-data">
+              Jumlah Murid
+            </div>
+            <div class="green-color margin-count">
+              {{dataStudent.total}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box-content-wrap">
+        <img src="images/ic_tambah_tutor.png" alt="Tambah Tutor" class="img-responsive center-block">
+
+        <h3>Tambah Tutor</h3>
+        <h5>Tambah data tutor baru yang belum terdaftar</h5>
+        <a ui-sref="landing.tambah-tutor"><button class="btn btn-primary button-add img-responsive center-block">Tambah Tutor</button></a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="box-content-wrap">
+        <img src="images/ic_tambah_kelas.png" alt="Tambah Tutor" class="img-responsive center-block kelas-img">
+
+        <h3>Tambah Kelas</h3>
+        <h5>Tambah data kelas baru dari tutor yang
+telah terdaftar</h5>
+        <a ui-sref="landing.tambah-kelas"><button class="btn btn-primary button-add img-responsive center-block">Tambah kelas</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
